@@ -5,16 +5,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-       String[] stuff = {"apple", "bob", "ham", "bob", "bacon"};
+       Integer[] nums = {1, 2, 3, 4, 5};
+       Character[] chars = {'a', 'b', 'c', 'd', 'e'};
 
-       List<String> list = Arrays.asList(stuff);
+       printMe(nums);
+       printMe(chars);
 
-       System.out.printf("%s ", list);
-       System.out.println();
+    }
 
-       Set<String> set = new HashSet<String>(list);
-       System.out.printf("%s", set);
-
-
+    //generic method
+    public static <T> void printMe(T[] x){
+        for(T b: x){
+            System.out.printf("%s ", b);
+        }
+        System.out.println();
     }
 }
