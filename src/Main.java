@@ -5,19 +5,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-       PriorityQueue<String> q = new PriorityQueue<String>();
+       String[] stuff = {"apple", "bob", "ham", "bob", "bacon"};
 
-        q.offer("first");
-        q.offer("second");
-        q.offer("third");
+       List<String> list = Arrays.asList(stuff);
 
-        System.out.printf("%s", q);
-        System.out.println();
+       System.out.printf("%s ", list);
+       System.out.println();
 
-        System.out.printf("%s", q.peek());
-        System.out.println();
+       Set<String> set = new HashSet<String>(list);
+       System.out.printf("%s", set);
 
-        q.poll();
-        System.out.printf("%s", q);
+
     }
 }
