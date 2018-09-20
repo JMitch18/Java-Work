@@ -5,19 +5,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Integer[] nums = {1, 2, 3, 4, 5};
-       Character[] chars = {'a', 'b', 'c', 'd', 'e'};
+    System.out.println(max(100, 45, 350));
+    System.out.println(max("honey", "zingers", "applefriters"));
 
-       printMe(nums);
-       printMe(chars);
 
     }
 
-    //generic method
-    public static <T> void printMe(T[] x){
-        for(T b: x){
-            System.out.printf("%s ", b);
-        }
-        System.out.println();
+    public static <T extends Comparable<T>> T max(T a, T b, T c){
+        T m = a;
+
+        if(b.compareTo(a) > 0)
+            m = b;
+        if(c.compareTo(m) > 0)
+            m = c;
+     return m;
     }
+
 }
